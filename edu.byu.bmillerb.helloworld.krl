@@ -43,7 +43,7 @@ Hello, #{ent:name.defaultsTo("world")}!
     select when edu_byu_bmillerb_helloworld name_given
       name re#(.+)# setting(new_val)
     fired {
-      end:name := new_val
+      ent:name := new_val
       raise edu_byu_bmillerb_helloworld event "name_saved" attributes event:attrs
     }
   }
