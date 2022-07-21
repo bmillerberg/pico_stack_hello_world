@@ -52,4 +52,11 @@ Hello, #{ent:name.defaultsTo("world")}!
       raise edu_byu_bmillerb_helloworld event "name_saved" attributes event:attrs
     }
   }
+  rule redirectBack {
+    select when edu_byu_bmillerb_helloworld name_saved
+    pre {
+      referrer = event:attr("_headers").get("referer") // [sic]
+    }
+    if referrer then send_directive("_redirect",{"url":referrer})
+  }
 }
