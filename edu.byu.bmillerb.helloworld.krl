@@ -15,6 +15,11 @@ ruleset edu.byu.bmillerb.helloworld {
 <p>
 Hello, #{ent:name.defaultsTo("world")}!
 </p>
+<p>How do you wish to be greeted?</p>
+<form action="#{url}">
+<input name="name"><br>
+<button type="submit">Submit</button>
+</form>
 <h2>Technical details</h2>
 <pre>#{url}</pre>
 >>
