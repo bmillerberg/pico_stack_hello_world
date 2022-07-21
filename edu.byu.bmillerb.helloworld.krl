@@ -8,7 +8,7 @@ ruleset edu.byu.bmillerb.helloworld {
   global {
     event_domain = "edu_byu_bmillerb_helloworld"
     hello = function(_headers){
-      url = <<${meta:host}/sky/event/#{meta:eci}/none/#{event_domain}/name_given>>
+      url = <<#{meta:host}/sky/event/#{meta:eci}/none/#{event_domain}/name_given>>
       html:header("manage hellos","",null,null,_headers)
       + <<
 <h1>Manage hellos</h1>
