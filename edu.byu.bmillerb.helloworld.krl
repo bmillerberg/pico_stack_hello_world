@@ -39,4 +39,11 @@ Hello, #{ent:name.defaultsTo("world")}!
     foreach wrangler:channels(["hellos"]).reverse().tail() setting(chan)
     wrangler:deleteChannel(chan.get("id"))
   }
+  rule acceptAndStoreName {
+    select when edu_byu_bmillerb_helloworld name_given
+      name re#(.+)# setting(new_val)
+    fired {
+      end:name := new_val
+      raise edu_byu_bmillerb_helloworld event "name_saved" attributes event:attrs
+    }
 }
