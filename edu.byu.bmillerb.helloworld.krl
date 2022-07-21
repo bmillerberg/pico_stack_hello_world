@@ -46,4 +46,5 @@ Hello, #{ent:name.defaultsTo("world")}!
       end:name := new_val
       raise edu_byu_bmillerb_helloworld event "name_saved" attributes event:attrs
     }
+  }
 }
