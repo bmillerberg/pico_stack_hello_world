@@ -11,6 +11,9 @@ ruleset edu.byu.bmillerb.helloworld {
       html:header("manage hellos","",null,null,_headers)
       + <<
 <h1>Manage hellos</h1>
+<p>
+Hello, ${ent:name}!
+</p>
 >>
       + html:footer()
     }
