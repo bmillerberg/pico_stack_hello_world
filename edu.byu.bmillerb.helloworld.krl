@@ -12,7 +12,7 @@ ruleset edu.byu.bmillerb.helloworld {
       + <<
 <h1>Manage hellos</h1>
 <p>
-Hello, ${ent:name}!
+Hello, #{ent:name}!
 </p>
 >>
       + html:footer()
